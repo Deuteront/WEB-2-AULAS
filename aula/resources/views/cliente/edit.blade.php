@@ -1,4 +1,4 @@
-@extends('cliente.principal')
+@extends('principal')
 @section('titulo', 'editar')
 @section('conteudo')
 <h3>ATUALIZAR CLIENTE</h3>

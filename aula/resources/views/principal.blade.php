@@ -7,8 +7,8 @@
 <body>
 <ul>
     <li><a href="{{ route('clientes.index') }}">Clientes</a></li>
-    <li><a href="{{ route('clientes.index') }}">Departamentos</a></li>
-    <li><a href="{{ route('clientes.index') }}">Produtos</a></li>
+    <li><a href="{{ route('departamentos.index') }}">Departamentos</a></li>
+    <li><a href="{{ route('produtos.index') }}">Produtos</a></li>
 </ul>
 @yield('conteudo')
 </body>

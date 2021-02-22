@@ -1,4 +1,4 @@
-@extends('cliente.principal')
+@extends('principal')
 @section('titulo', 'Informações Cliente')
 @section('conteudo')
 <h3>Clientes</h3>
