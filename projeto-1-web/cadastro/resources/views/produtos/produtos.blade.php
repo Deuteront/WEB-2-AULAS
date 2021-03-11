@@ -2,9 +2,9 @@
 @section('body')
 <div class="card border">
     <div class="card-body">
-        <h5 class="card-title">Cadastro de Produtos</h5>
+        <h5 class="card-title">Produtos</h5>
         @if(count($prds) > 0)
-        <table class="table table-ordered table-hover table-striped">
+        <table style="border: 1px solid #dee2e6" class="table table-bordered table-ordered table-hover table-striped">
             <thead class="thead-light">
             <tr>
                 <th class="text-center">Código</th>
@@ -22,7 +22,7 @@
                 <td>{{$prd->nome}}</td>
                 <td>{{$prd->estoque}}</td>
                 <td>{{$prd->preco}}</td>
-                <td >{{$prd->categoria_id}}</td>
+                <td>{{$prd->categoria_id}}</td>
                 <td class="d-flex">
                     <a href="{{ route('produtos.edit', $prd['id']) }}" style="margin-right: 5px"
                        class="btn btn-primary">Editar</a>

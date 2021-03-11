@@ -2,10 +2,9 @@
 @section('body')
 <div class="card border">
     <div class="card-body">
-        <h5 class="card-title">Cadastro de Categorias</h5>
-
+        <h5 class="card-title">Categorias</h5>
         @if(count($cats) > 0)
-        <table class="table table-ordered table-hover table-striped">
+        <table style="border: 1px solid #dee2e6" class="table table-bordered table-ordered table-hover table-striped">
             <thead class="thead-light">
             <tr>
                 <th class="text-center">Código</th>
@@ -19,8 +18,10 @@
                 <td class="text-center">{{$cat->id}}</td>
                 <td>{{$cat->nome}}</td>
                 <td class="d-flex">
-                    <a href="{{ route('categorias.edit', $cat['id']) }}" style="margin-right: 5px" class="btn btn-primary">Editar</a>
-                    <form style="margin: 0; align-self: center;" action="{{ route('categorias.destroy', $cat['id']) }}" method="POST">
+                    <a href="{{ route('categorias.edit', $cat['id']) }}" style="margin-right: 5px"
+                       class="btn btn-primary">Editar</a>
+                    <form style="margin: 0; align-self: center;" action="{{ route('categorias.destroy', $cat['id']) }}"
+                          method="POST">
                         @csrf
                         @method('DELETE')
                         <input type="submit" class="btn btn-danger" value="Apagar">
