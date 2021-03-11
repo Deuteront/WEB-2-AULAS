@@ -1,6 +1,7 @@
 @extends('layout.app', ["current" => "produtos"])
 @section('body')
 <div class="card border">
+    <h4 style="border-bottom: 1px solid #dee2e6;  padding: 1rem;">Atualizar Produto</h4>
     <div class="card-body">
         <form action="{{ route('produtos.update', $prd['id']) }}" method="POST">
             @csrf
@@ -26,7 +27,7 @@
                     <select name="categoriaProduto" class="form-control">
                         <option value="0">Select categoria:</option>
                         @foreach($cats as $cat)
-                        <option value="{{ $cat['id'] }}">{{ $cat['nome'] }}</option>
+                        <option value="{{ $cat['id'] }}">{{ $cat['id'] }} - {{ $cat['nome'] }}</option>
                         @endforeach
                     </select>
                 </div>

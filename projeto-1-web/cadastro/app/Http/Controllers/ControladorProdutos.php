@@ -89,7 +89,7 @@ class ControladorProdutos extends Controller
             $prd->nome = $request->input('nomeProduto');
             $prd->estoque = $request->input('estoqueProduto');
             $prd->preco = $request->input('precoProduto');
-            $prd->categoria = $request->input('categoriaProduto');
+            $prd->categoria_id = $request->input('categoriaProduto');
             $prd->save();
         }
         return redirect('produtos');
